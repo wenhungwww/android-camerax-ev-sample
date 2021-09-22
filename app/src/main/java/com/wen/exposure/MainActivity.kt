@@ -372,6 +372,10 @@ class MainActivity : AppCompatActivity() {
             { container.systemUiVisibility = FLAGS_FULLSCREEN },
             IMMERSIVE_FLAG_TIMEOUT
         )
+
+        camera?.let {
+            slider?.setup(it)
+        }
     }
 
     override fun onDestroy() {
